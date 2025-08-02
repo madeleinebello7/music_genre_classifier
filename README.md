@@ -8,7 +8,7 @@ I began by building a genre classifier using a transformer model. I began with a
 
 # How to run the code
 
-The first thing to focus on is importing the data. We imported the data from Kaggle, using the command:
+The first thing to focus on is importing the data. I imported the data from Kaggle, using the command:
 import kagglehub
 path = kagglehub.dataset_download("andradaolteanu/gtzan-dataset-music-genre-classification")
  This command stores the data at location: path. Note that the following code might have to be modified to accommodate the user's given path. We then moved the data to the present working directory using the command: mv path/* .
@@ -52,5 +52,5 @@ from joblib import Parallel, delayed
 
 # Describe any pretrained models or datasets used
 The dataset used in GTZAN, which contains 1000 audio clips (10 genres, 100 clips each), each 30 seconds long, at 22050Hz, and is the standard benchmark for music genre classification.
-We used wav2vec, a pretrained audio transformer designed by Facebook to embed the audio files. However, we quickly veered away from this and used mel spectrograms instead.
+I used wav2vec, a pretrained audio transformer designed by Facebook to embed the audio files. However, we quickly veered away from this and used mel spectrograms instead.
 

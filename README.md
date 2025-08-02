@@ -1,3 +1,11 @@
+# What?
+
+This project applies deep learning to music to uncover genre-defining characteristics and improve genre classification accuracy. My first objective is to build a classifier that can predict the genre of a song based on its audio features, using transformer-based models well-suited for sequential data like music. Beyond classification accuracy, I aim to understand why the model makes its predictions by analyzing the attention vectors. This will allow me to identify which parts of a song are most influential in determining its genre, offering deeper insight into the acoustic patterns that distinguish genres. Ultimately, my goal is not only to develop a high-performing classifier but also to advance interpretability by revealing the specific audio segments that contribute most to genre identification.
+
+# How?
+
+I began by building a genre classifier using a transformer model. I began with a simple model with 2 layers and 4 attention heads, then quickly improved to a 4 layer and 4 head per layer model. I tokenized our audio files using mel spectrograms, a time-frequency representation of audio that show how the frequency content evolves over time; through these we managed to compress each 30 second audio into a (1290,128) tensor, which I then used to train and test our model. I managed to reach a 95% accuracy, precision, and recall on the unseen data. Finally, I extracted the attention vectors from the model to analyze which characteristics are particularly important in predicting what genre an audio is.
+
 # How to run the code
 
 The first thing to focus on is importing the data. We imported the data from Kaggle, using the command:
